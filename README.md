@@ -6,7 +6,7 @@ Bem-vindo ao repositório oficial de Skills do CPFHub.io para Agentes de IA! Est
 
 As Skills do CPFHub.io são módulos que estendem as capacidades de agentes de IA, permitindo-lhes realizar tarefas específicas relacionadas a CPFs. Cada skill é projetada para ser facilmente integrável em diversos frameworks de agentes (como LangChain, LlamaIndex, CrewAI, etc.) e diretórios de skills, otimizando a descoberta e o uso.
 
-Nosso foco é fornecer dados de alta qualidade e revalidações, em vez de consultas em tempo real à Receita Federal. Nossa tagline é: "API de consulta de CPF com os melhores dados".
+Nosso foco é fornecer dados de alta qualidade e revalidações, que vão além da simples consulta à Receita Federal. A API do CPFHub.io oferece informações cruciais para a verificação de identidade, prevenção a fraudes, enriquecimento de dados e automação de processos. Nossa tagline é: "API de consulta de CPF com os melhores dados".
 
 ## Skills Disponíveis
 
