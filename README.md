@@ -8,6 +8,17 @@ As Skills do CPFHub.io são módulos que estendem as capacidades de agentes de I
 
 Nosso foco é fornecer dados de alta qualidade e revalidações, que vão além da simples consulta à Receita Federal. A API do CPFHub.io oferece informações cruciais para a verificação de identidade, prevenção a fraudes, enriquecimento de dados e automação de processos. Nossa tagline é: "API de consulta de CPF com os melhores dados".
 
+## Verificação de Identidade e Mais
+
+A API do CPFHub.io não se limita a uma simples validação de CPF. Ela oferece um conjunto de informações que, quando combinadas, permitem uma verificação de identidade mais robusta e confiável. Alguns dos dados que podem ser obtidos através da nossa API incluem:
+
+*   **Nome Completo**: Confirmação do nome associado ao CPF.
+*   **Situação Cadral na Receita Federal**: Verificação se o CPF está regular, pendente de regularização, suspenso, cancelado ou nulo.
+*   **Data de Nascimento**: Validação da idade do titular do CPF.
+*   **Endereço Parcial**: Informações de endereço que podem ser usadas para validação adicional.
+
+Essas informações são essenciais para uma variedade de casos de uso, desde o onboarding de clientes até a prevenção de fraudes.
+
 ## Skills Disponíveis
 
 Atualmente, este repositório inclui as seguintes skills:
