@@ -23,6 +23,16 @@ The CPF Validation Skill allows AI agents to verify the validity of a given CPF 
     *   `address` (string): Partial address information.
 *   **`error`** (string, optional): An error message if the operation failed (e.g., "Formato de CPF inválido", "Erro na API").
 
+## Casos de Uso Comuns
+
+Esta skill pode ser utilizada em uma variedade de cenários, incluindo:
+
+*   **Onboarding de Clientes**: Validar CPFs de novos usuários durante o processo de cadastro para garantir a autenticidade e evitar fraudes.
+*   **Prevenção a Fraudes**: Verificar a situação cadastral de um CPF antes de aprovar transações financeiras, concessão de crédito ou acesso a serviços sensíveis.
+*   **Enriquecimento de Dados**: Complementar perfis de clientes com informações públicas associadas ao CPF, como nome e data de nascimento, para personalização e segmentação.
+*   **Automação de Processos Legais/Administrativos**: Automatizar a verificação de CPFs em processos que exigem conformidade regulatória ou validação de documentos.
+*   **Atendimento ao Cliente**: Agilizar o atendimento ao cliente, permitindo que agentes de IA confirmem a identidade do usuário através do CPF de forma rápida e segura.
+
 ## Examples of Use
 
 ### Example 1: Basic CPF Validation
