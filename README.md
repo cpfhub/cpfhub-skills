@@ -13,9 +13,7 @@ Nosso foco é fornecer dados de alta qualidade e revalidações, que vão além 
 A API do CPFHub.io não se limita a uma simples validação de CPF. Ela oferece um conjunto de informações que, quando combinadas, permitem uma verificação de identidade mais robusta e confiável. Alguns dos dados que podem ser obtidos através da nossa API incluem:
 
 *   **Nome Completo**: Confirmação do nome associado ao CPF.
-*   **Situação Cadral na Receita Federal**: Verificação se o CPF está regular, pendente de regularização, suspenso, cancelado ou nulo.
 *   **Data de Nascimento**: Validação da idade do titular do CPF.
-*   **Endereço Parcial**: Informações de endereço que podem ser usadas para validação adicional.
 
 Essas informações são essenciais para uma variedade de casos de uso, desde o onboarding de clientes até a prevenção de fraudes.
 
