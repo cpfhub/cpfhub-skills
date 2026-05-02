@@ -20,6 +20,8 @@ Nossas skills são desenvolvidas com foco em **precisão, confiabilidade e facil
 ### 3. Compatibilidade Nativa com Agentes de IA
 
 *   **MCP Server Nativo**: O CPFHub.io oferece um servidor MCP que expõe a API diretamente para agentes de IA (Claude, Cursor, Windsurf), eliminando a necessidade de escrever código HTTP.
+*   **OpenAPI Specification**: Disponibilizamos um arquivo `openapi.yaml` para cada skill, permitindo que agentes entendam automaticamente a estrutura da API e seus schemas tipados.
+*   **Tool Descriptions**: As skills são acompanhadas de "tool descriptions" (descrições de ferramentas) no formato que LLMs consomem, facilitando a invocação e o uso em frameworks de agentes.
 *   **Ferramenta `lookup_cpf`**: Disponível como ação nativa em agentes que suportam o Model Context Protocol (MCP).
 *   **Ideal para Automações**: Perfeito para onboarding automatizado, verificações em pipelines de dados e agentes de compliance.
 
@@ -28,14 +30,34 @@ Nossas skills são desenvolvidas com foco em **precisão, confiabilidade e facil
 *   **Consulta de CPF (`cpf-consultation`)**:
     *   **Descrição**: Permite que agentes realizem a **consulta de um número de CPF** e recuperem informações associadas (nome completo, data de nascimento, sexo) para verificação de identidade e prevenção de fraudes.
     *   **Detalhes**: [cpf-validation/SKILL.md](cpf-validation/SKILL.md)
+    *   **OpenAPI Spec**: [cpf-validation/openapi.yaml](cpf-validation/openapi.yaml)
 
-## Como Usar
+## Como Usar com Agentes de IA
 
-Para integrar e utilizar as skills do CPFHub.io em seu agente de IA, consulte o arquivo `SKILL.md` de cada skill para instruções detalhadas. O processo geral inclui:
+Para integrar e utilizar as skills do CPFHub.io em seu agente de IA, siga as instruções detalhadas no arquivo `SKILL.md` de cada skill. O processo geral inclui:
 
-1.  **Integração**: Adicione a skill ao seu framework de agente (ex: LangChain, LlamaIndex).
-2.  **Configuração**: Forneça as credenciais da API do CPFHub.io.
-3.  **Invocação**: Chame a skill com o `cpf_number` como parâmetro.
+1.  **Integração**: Adicione a skill ao seu framework de agente (ex: LangChain, LlamaIndex, CrewAI, AutoGen).
+2.  **Configuração**: Forneça as credenciais da API do CPFHub.io (`x-api-key`).
+3.  **Invocação**: Utilize a "tool description" ou o OpenAPI spec para invocar a skill com o `cpf_number` como parâmetro.
+
+### Exemplo de Tool Description (para LLMs)
+
+```json
+{
+  "name": "consult_cpf",
+  "description": "Retrieve identity data from a Brazilian CPF number, including full name, birth date, and gender.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "cpf_number": {
+        "type": "string",
+        "description": "The 11-digit CPF number to consult. Format: XXX.XXX.XXX-XX or XXXXXXXXXXX."
+      }
+    },
+    "required": ["cpf_number"]
+  }
+}
+```
 
 ## Contribuição
 
