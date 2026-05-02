@@ -16,17 +16,17 @@ A skill `cpf-consultation` oferece uma maneira direta e confiável de enriquecer
 
 ### Saída
 
-*   **`success`** (boolean): `true` se a consulta foi bem-sucedida e dados foram encontrados, `false` caso contrário.
-*   **`data`** (object, optional): Um objeto contendo os dados associados ao CPF, se disponível e válido. Isso inclui:
-    *   `cpf` (string): O número de CPF consultado.
+*   **`success`** (boolean): Indica se a consulta foi bem-sucedida (`true`) ou não (`false`).
+*   **`data`** (object, optional): Contém os dados do CPF consultado, se `success` for `true`:
+    *   `cpf` (string): O número de CPF.
     *   `name` (string): Nome completo do titular.
-    *   `nameUpper` (string): Nome completo em letras maiúsculas.
+    *   `nameUpper` (string): Nome completo em maiúsculas.
     *   `gender` (string): Gênero (M/F).
-    *   `birthDate` (string): Data de nascimento (formato: `DD/MM/YYYY`).
+    *   `birthDate` (string): Data de nascimento (DD/MM/YYYY).
     *   `day` (number): Dia de nascimento.
     *   `month` (number): Mês de nascimento.
     *   `year` (number): Ano de nascimento.
-*   **`error`** (string, optional): Uma mensagem de erro se a operação falhou (e.g., "CPF inválido", "Erro na API").
+*   **`error`** (string, optional): Mensagem de erro em caso de falha na operação (ex: "CPF inválido").
 
 ## Casos de Uso para Agentes de IA
 
