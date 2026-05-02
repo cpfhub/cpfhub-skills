@@ -1,46 +1,45 @@
-# CPFHub.io Agent Skills
+# CPFHub.io Agent Skills: Consulta de CPF para IA
 
-Bem-vindo ao repositório oficial de Skills do CPFHub.io para Agentes de IA! Este repositório contém uma coleção de habilidades pré-construídas que permitem que agentes de inteligência artificial interajam com a API do CPFHub.io para **consulta de CPFs** e recuperação de dados associados.
+Bem-vindo ao repositório oficial de Skills do CPFHub.io, projetado para capacitar Agentes de IA com capacidades avançadas de **consulta de CPFs** (Cadastro de Pessoas Físicas) brasileiros. Esta coleção de habilidades pré-construídas permite que seus agentes interajam de forma eficiente com a API do CPFHub.io para **verificação de identidade**, **prevenção de fraudes** e **enriquecimento de dados**.
 
-## O que são CPFHub.io Skills?
+## Por que usar CPFHub.io Skills para seu Agente de IA?
 
-As Skills do CPFHub.io são módulos que estendem as capacidades de agentes de IA, permitindo-lhes realizar tarefas específicas relacionadas a CPFs. Cada skill é projetada para ser facilmente integrável em diversos frameworks de agentes (como LangChain, LlamaIndex, CrewAI, etc.) e diretórios de skills, otimizando a descoberta e o uso.
+Nossas skills são desenvolvidas com foco em **precisão, confiabilidade e facilidade de integração**, tornando-as ideais para automações e fluxos de trabalho baseados em IA.
 
-Nossas skills focam na **consulta de CPF**, fornecendo acesso a dados como nome completo, data de nascimento e sexo, essenciais para a verificação de identidade e prevenção de fraudes.
+### 1. Qualidade de Dados Superior
 
-Nosso foco é fornecer dados de alta qualidade e revalidações, que vão além da simples consulta à Receita Federal. A API do CPFHub.io oferece informações cruciais para a verificação de identidade, prevenção a fraudes, enriquecimento de dados e automação de processos. Nossa tagline é: "API de consulta de CPF com os melhores dados".
+*   **Arquitetura Multi-Origem**: Agregamos dados de **15+ fontes oficiais e privadas** (bureaus de crédito, registros públicos, Receita Federal, etc.) para oferecer a maior cobertura e confiabilidade.
+*   **IA Proprietária**: Nosso algoritmo exclusivo garante a **precisão e consistência** dos dados, com auditorias diárias para mantê-los sempre atualizados.
+*   **Foco em Consulta de CPF**: Fornecemos dados como **nome completo, data de nascimento e sexo**, essenciais para uma verificação de identidade robusta.
 
-## Qualidade de Dados & Arquitetura Multi-Origem
+### 2. Developer Experience (DX) Otimizada
 
-O CPFHub.io se destaca pela sua **arquitetura multi-origem**, agregando dados de **15+ fontes oficiais e privadas**, incluindo bureaus de crédito, dados cadastrais, registros públicos e a Receita Federal. Utilizamos **IA proprietária** para garantir precisão e consistência, com auditorias periódicas para manter os dados atualizados diariamente. O resultado são dados enriquecidos com maior cobertura e confiabilidade.
+*   **Integração Rápida**: Comece em **~5 minutos** com exemplos de código prontos em 13+ linguagens (Node.js, Python, PHP, Go, Ruby, Java, .NET, Rust, Elixir, etc.).
+*   **API Simples e Consistente**: Endpoint único `GET /cpf/{CPF_NUMBER}` com retorno JSON padronizado, eliminando surpresas no schema.
 
-## Developer Experience & Compatibilidade com IA
+### 3. Compatibilidade Nativa com Agentes de IA
 
-Projetada por desenvolvedores, para desenvolvedores, a API do CPFHub.io oferece:
-
-*   **Integração em ~5 minutos**: Com exemplos de código prontos em 13+ linguagens (Node.js, Python, PHP, Go, Ruby, Java, .NET, Rust, Elixir, etc.).
-*   **Endpoint único e simples**: `GET /cpf/{CPF_NUMBER}` com retorno JSON padronizado.
-*   **Compatibilidade nativa com agentes de IA**: Através do nosso **MCP Server nativo**, agentes de IA (Claude, Cursor, Windsurf) podem consultar CPFs diretamente, sem necessidade de código HTTP. A API é pensada para automações e fluxos de IA, com resposta JSON previsível.
+*   **MCP Server Nativo**: O CPFHub.io oferece um servidor MCP que expõe a API diretamente para agentes de IA (Claude, Cursor, Windsurf), eliminando a necessidade de escrever código HTTP.
+*   **Ferramenta `lookup_cpf`**: Disponível como ação nativa em agentes que suportam o Model Context Protocol (MCP).
+*   **Ideal para Automações**: Perfeito para onboarding automatizado, verificações em pipelines de dados e agentes de compliance.
 
 ## Skills Disponíveis
 
-Atualmente, este repositório inclui as seguintes skills:
-
 *   **Consulta de CPF (`cpf-consultation`)**:
-    *   **Descrição**: Permite que agentes realizem a **consulta de um número de CPF** e recuperem informações associadas, como nome completo, data de nascimento e sexo, para verificação de identidade e prevenção de fraudes.
+    *   **Descrição**: Permite que agentes realizem a **consulta de um número de CPF** e recuperem informações associadas (nome completo, data de nascimento, sexo) para verificação de identidade e prevenção de fraudes.
     *   **Detalhes**: [cpf-validation/SKILL.md](cpf-validation/SKILL.md)
 
 ## Como Usar
 
-Para utilizar as skills do CPFHub.io em seu agente de IA, siga as instruções detalhadas no arquivo `SKILL.md` de cada skill. Geralmente, o processo envolve:
+Para integrar e utilizar as skills do CPFHub.io em seu agente de IA, consulte o arquivo `SKILL.md` de cada skill para instruções detalhadas. O processo geral inclui:
 
-1.  **Integração**: Adicione a skill ao seu framework de agente preferido.
-2.  **Configuração**: Forneça as credenciais necessárias para acessar a API do CPFHub.io.
-3.  **Invocação**: Chame a skill com os parâmetros de entrada apropriados.
+1.  **Integração**: Adicione a skill ao seu framework de agente (ex: LangChain, LlamaIndex).
+2.  **Configuração**: Forneça as credenciais da API do CPFHub.io.
+3.  **Invocação**: Chame a skill com o `cpf_number` como parâmetro.
 
 ## Contribuição
 
-Aceitamos contribuições da comunidade para melhorar as skills existentes ou adicionar novas. Por favor, consulte nosso guia de contribuição (em breve) para mais detalhes sobre como submeter Pull Requests.
+Aceitamos contribuições da comunidade. Consulte nosso guia de contribuição (em breve) para mais detalhes.
 
 ## Licença
 
@@ -49,3 +48,7 @@ Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICEN
 ## Contato
 
 Para dúvidas, suporte ou parcerias, entre em contato conosco em contact@cpfhub.io.
+
+---
+
+**Slogan do CPFHub.io**: "API de consulta de CPF com os melhores dados"
