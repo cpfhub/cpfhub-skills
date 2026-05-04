@@ -215,6 +215,7 @@ Obtenha sua chave de API gratuita em [app.cpfhub.io](https://app.cpfhub.io) — 
 - **Prevenção de fraude em tempo real**: Verifique a identidade do CPF durante transações online
 - **Pipelines de enriquecimento de dados**: Enriqueça perfis de clientes com dados de identidade verificados
 - **Agentes de compliance KYC**: Automatize a verificação de CPF em fluxos de Know Your Customer
+
 ---
 
 ## Tratamento de Erros
