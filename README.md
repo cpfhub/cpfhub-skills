@@ -1,6 +1,6 @@
 # cpfhub-skills
 
-🇺🇸 **English** | [🇧🇷 Português](#português)
+🇺🇸 **English** | [🇧🇷 Português](#portugu%C3%AAs)
 
 **Official AI Agent Skills for [CPFHub.io](https://cpfhub.io) — Brazilian CPF Lookup API**
 
@@ -19,15 +19,15 @@ CPFHub.io is a REST API that returns name, gender, and date of birth from any Br
 ## Available Skills
 
 | Skill | Description | Details |
-|-------|-------------|----------|
-| `get_person_by_cpf` | Retrieve identity data from a Brazilian CPF number | [get-person-by-cpf/SKILL.md](get-person-by-cpf/SKILL.md) |
+|---|---|---|
+| `get_person_by_cpf` | Retrieve identity data from a Brazilian CPF number | [get-person-by-cpf/SKILL.md](https://github.com/cpfhub/cpfhub-skills/blob/main/get-person-by-cpf/SKILL.md) |
 
 ---
 
 ## Quick Start
 
 ```bash
-curl -X GET "https://api.cpfhub.io/cpf/12345678909" \\
+curl -X GET "https://api.cpfhub.io/cpf/12345678909" \
   -H "x-api-key: YOUR_API_KEY"
 ```
 
@@ -64,7 +64,7 @@ Get your free API key at [app.cpfhub.io](https://app.cpfhub.io) — no credit ca
     "properties": {
       "cpf": {
         "type": "string",
-        "description": "Brazilian CPF number"
+        "description": "Brazilian CPF number (with or without formatting)"
       }
     },
     "required": ["cpf"]
@@ -86,19 +86,20 @@ Get your free API key at [app.cpfhub.io](https://app.cpfhub.io) — no credit ca
 ## Error Handling
 
 | HTTP Code | Meaning |
-|-----------|--------|
+|---|---|
 | `400` | Invalid CPF format |
 | `401` | Invalid or missing API key |
 | `404` | CPF not found |
 | `429` | Rate limit exceeded |
 | `500` | Server error |
+| `503` | Service temporarily unavailable |
 
 ---
 
 ## Rate Limits
 
 | Plan | Limit |
-|------|-------|
+|---|---|
 | Free | 1 request every 2 seconds · 50 requests/month |
 | Pro | 1 request per second · 1,000 requests/month |
 | Corporate | Custom |
@@ -108,7 +109,7 @@ Get your free API key at [app.cpfhub.io](https://app.cpfhub.io) — no credit ca
 ## Plans & Pricing
 
 | Plan | Price | Included | Extra |
-|------|-------|----------|-------|
+|---|---|---|---|
 | **Free** | R$ 0/month | 50 lookups | — |
 | **Pro** | R$ 149/month | 1,000 lookups | R$ 0,15/lookup |
 | **Corporate** | Custom | Custom | Custom |
@@ -124,7 +125,7 @@ Get your free API key at [app.cpfhub.io](https://app.cpfhub.io) — no credit ca
 - [OpenAPI Specification](https://github.com/cpfhub/cpfhub-openapi/blob/main/openapi.yaml)
 - [Dashboard](https://app.cpfhub.io)
 - [Status Page](https://app.cpfhub.io/status)
-- [LGPD Compliance](https://cpfhub.io/lgpd)
+- [LGPD Compliance](https://cpfhub.io/compliance)
 
 ---
 
@@ -153,15 +154,15 @@ O CPFHub.io é uma API REST que retorna nome, gênero e data de nascimento de qu
 ## Skills Disponíveis
 
 | Skill | Descrição | Detalhes |
-|-------|------------|----------|
-| `get_person_by_cpf` | Recupera dados de identidade a partir de um CPF brasileiro | [get-person-by-cpf/SKILL.md](get-person-by-cpf/SKILL.md) |
+|---|---|---|
+| `get_person_by_cpf` | Recupera dados de identidade a partir de um CPF brasileiro | [get-person-by-cpf/SKILL.md](https://github.com/cpfhub/cpfhub-skills/blob/main/get-person-by-cpf/SKILL.md) |
 
 ---
 
 ## Início Rápido
 
 ```bash
-curl -X GET "https://api.cpfhub.io/cpf/12345678909" \\
+curl -X GET "https://api.cpfhub.io/cpf/12345678909" \
   -H "x-api-key: SUA_CHAVE_DE_API"
 ```
 
@@ -198,7 +199,7 @@ Obtenha sua chave de API gratuita em [app.cpfhub.io](https://app.cpfhub.io) — 
     "properties": {
       "cpf": {
         "type": "string",
-        "description": "Brazilian CPF number"
+        "description": "Brazilian CPF number (with or without formatting)"
       }
     },
     "required": ["cpf"]
@@ -214,25 +215,25 @@ Obtenha sua chave de API gratuita em [app.cpfhub.io](https://app.cpfhub.io) — 
 - **Prevenção de fraude em tempo real**: Verifique a identidade do CPF durante transações online
 - **Pipelines de enriquecimento de dados**: Enriqueça perfis de clientes com dados de identidade verificados
 - **Agentes de compliance KYC**: Automatize a verificação de CPF em fluxos de Know Your Customer
-
 ---
 
 ## Tratamento de Erros
 
 | Código HTTP | Significado |
-|------------|-------------|
+|---|---|
 | `400` | Formato de CPF inválido |
 | `401` | Chave de API inválida ou ausente |
 | `404` | CPF não encontrado |
 | `429` | Limite de requisições excedido |
 | `500` | Erro no servidor |
+| `503` | Serviço temporariamente indisponível |
 
 ---
 
 ## Limites de Requisição
 
 | Plano | Limite |
-|-------|--------|
+|---|---|
 | Gratuito | 1 requisição a cada 2 segundos · 50 requisições/mês |
 | Pro | 1 requisição por segundo · 1.000 requisições/mês |
 | Corporativo | Personalizado |
@@ -242,7 +243,7 @@ Obtenha sua chave de API gratuita em [app.cpfhub.io](https://app.cpfhub.io) — 
 ## Planos e Preços
 
 | Plano | Preço | Incluído | Extra |
-|-------|-------|----------|-------|
+|---|---|---|---|
 | **Gratuito** | R$ 0/mês | 50 consultas | — |
 | **Pro** | R$ 149/mês | 1.000 consultas | R$ 0,15/consulta |
 | **Corporativo** | Personalizado | Personalizado | Personalizado |
@@ -258,7 +259,7 @@ Obtenha sua chave de API gratuita em [app.cpfhub.io](https://app.cpfhub.io) — 
 - [Especificação OpenAPI](https://github.com/cpfhub/cpfhub-openapi/blob/main/openapi.yaml)
 - [Dashboard](https://app.cpfhub.io)
 - [Página de Status](https://app.cpfhub.io/status)
-- [Conformidade LGPD](https://cpfhub.io/lgpd)
+- [Conformidade LGPD](https://cpfhub.io/compliance)
 
 ---
 

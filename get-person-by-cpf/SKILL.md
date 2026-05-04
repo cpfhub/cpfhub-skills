@@ -37,23 +37,23 @@ Powered by CPFHub.io's multi-source architecture aggregating data from 15+ offic
 
 ### Input
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `cpf` | `string` | Yes | Brazilian CPF number. Accepts `000.000.000-00` or `00000000000` |
+| Parameter | Type     | Required | Description                                                      |
+|-----------|----------|----------|------------------------------------------------------------------|
+| `cpf`     | `string` | Yes      | Brazilian CPF number. Accepts `000.000.000-00` or `00000000000` |
 
 ### Output
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `success` | `boolean` | `true` if lookup succeeded |
-| `data.cpf` | `string` | CPF number (digits only) |
-| `data.name` | `string` | Full name — e.g. `"Fulano de Tal"` |
-| `data.nameUpper` | `string` | Full name in uppercase |
-| `data.gender` | `string` | `"M"` or `"F"` |
-| `data.birthDate` | `string` | Date of birth — `"DD/MM/YYYY"` |
-| `data.day` | `number` | Birth day |
-| `data.month` | `number` | Birth month |
-| `data.year` | `number` | Birth year |
+| Field           | Type      | Description                         |
+|-----------------|-----------|-------------------------------------|
+| `success`       | `boolean` | `true` if lookup succeeded          |
+| `data.cpf`      | `string`  | CPF number (digits only)            |
+| `data.name`     | `string`  | Full name — e.g. `"Fulano de Tal"`  |
+| `data.nameUpper`| `string`  | Full name in uppercase              |
+| `data.gender`   | `string`  | `"M"` or `"F"`                      |
+| `data.birthDate`| `string`  | Date of birth — `"DD/MM/YYYY"`      |
+| `data.day`      | `integer` | Birth day                           |
+| `data.month`    | `integer` | Birth month                         |
+| `data.year`     | `integer` | Birth year                          |
 
 ---
 
@@ -116,13 +116,14 @@ curl -X GET "https://api.cpfhub.io/cpf/12345678909" \
 
 ## Error Handling
 
-| HTTP Code | Meaning |
-|-----------|---------|
-| `400` | Invalid CPF format |
-| `401` | Invalid or missing API key |
-| `404` | CPF not found |
-| `429` | Rate limit exceeded |
-| `500` | Server error |
+| HTTP Code | Meaning                       |
+|-----------|-------------------------------|
+| `400`     | Invalid CPF format            |
+| `401`     | Invalid or missing API key    |
+| `404`     | CPF not found                 |
+| `429`     | Rate limit exceeded           |
+| `500`     | Server error                  |
+| `503`     | Service temporarily unavailable |
 
 ---
 
@@ -155,4 +156,4 @@ CPFHub.io provides a native MCP server, enabling AI agents (Claude, Cursor, Wind
 - [Dashboard](https://app.cpfhub.io)
 - [MCP Server](https://github.com/cpfhub/cpfhub-mcp)
 - [OpenAPI Spec](https://github.com/cpfhub/cpfhub-openapi/blob/main/openapi.yaml)
-- [LGPD Compliance](https://cpfhub.io/lgpd)
+- [LGPD Compliance](https://cpfhub.io/compliance)
